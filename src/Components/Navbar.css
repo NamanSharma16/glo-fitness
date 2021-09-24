@@ -1,0 +1,15 @@
+#navbar-brand{
+    color: rgb(255, 165, 113);
+    font-weight: bold;
+    font-family:sans-serif;
+    font-size: xx-large; 
+}
+
+#login, 
+#cart{
+    color: white;
+    font-weight: bold;
+}
+.nav-item{
+    font-weight: bold;
+}
