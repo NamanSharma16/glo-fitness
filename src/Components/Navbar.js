@@ -1,5 +1,7 @@
 import React from 'react'
 import './Navbar.css'
+import { NavLink } from 'react-router-dom'
+import Checkout from './Checkout';
 
 function Navbar() {
     return (
@@ -14,7 +16,9 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
+                                <NavLink to = "/">
                                 <a className="nav-link active nav-item" aria-current="page" href="/" >Home</a>
+                                </NavLink>
                             </li>
                             
                             <li className="nav-item dropdown">
@@ -26,14 +30,50 @@ function Navbar() {
                                     <li><a className="dropdown-item" href="/">Meditation</a></li>
                                     <li><a className="dropdown-item" href="/">Pilates</a></li>
                                 </ul>
+                               
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link active nav-item" href="/">Orders</a>
+                            <li className="nav-link nav-item active">
+                                <NavLink 
+                                    to="./Checkout"> 
+                                    <a  
+                                    className="nav-link active nav-item" 
+                                    aria-current="page" 
+                                    href="/" 
+                                    >
+                                        Orders
+                                    </a>
+                                </NavLink>
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <button className="btn btn-outline-primary" type="submit" id="login">Log In</button>
-                            <button className="btn btn-outline-success mx-3" type="submit" id="cart">Cart</button>
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li className="nav-item">
+                                    <button 
+                                        className="btn btn-outline-primary" 
+                                        type="submit" 
+                                        id="login"
+                                    >
+                                        <NavLink 
+                                            to='./Components/Pages/Login'
+                                        >
+                                            Login
+                                        </NavLink>
+                                    </button>
+                                </li>
+
+                                <li className="nav-item"> 
+                                    <button 
+                                        className="btn btn-outline-success mx-3" 
+                                        type="submit" 
+                                        id="cart"> 
+                                        <NavLink 
+                                            to='./Checkout'
+                                        >
+                                            Cart
+                                        </NavLink>
+                                    </button>
+                                </li>
+                            </ul>
                         </form>
                     </div>
                 </div>
