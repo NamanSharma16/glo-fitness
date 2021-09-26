@@ -16,8 +16,13 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink to = "/">
-                                <a className="nav-link active nav-item" aria-current="page" href="/" >Home</a>
+                                <NavLink to = "/" style={{textDecoration:"none", color:'white'}}>
+                                <a className="nav-link active" 
+                                aria-current="page" 
+                                href="/" 
+                                >
+                                Home
+                                </a>
                                 </NavLink>
                             </li>
                             
@@ -32,11 +37,14 @@ function Navbar() {
                                 </ul>
                                
                             </li>
-                            <li className="nav-link nav-item active">
+                            
+                            <li className="nav-item">
                                 <NavLink 
-                                    to="./Checkout"> 
+                                    to="/checkout" 
+                                    style={{textDecoration:"none", color:'white'}}
+                                    > 
                                     <a  
-                                    className="nav-link active nav-item" 
+                                    className="nav-link active" 
                                     aria-current="page" 
                                     href="/" 
                                     >
@@ -54,7 +62,8 @@ function Navbar() {
                                         id="login"
                                     >
                                         <NavLink 
-                                            to='./Components/Pages/Login'
+                                            to='/login'
+                                            style={{textDecoration:"none", color:'white'}}
                                         >
                                             Login
                                         </NavLink>
@@ -67,7 +76,8 @@ function Navbar() {
                                         type="submit" 
                                         id="cart"> 
                                         <NavLink 
-                                            to='./Checkout'
+                                            to='/Checkout'
+                                            style={{textDecoration:"none", color:'white'}}
                                         >
                                             Cart
                                         </NavLink>

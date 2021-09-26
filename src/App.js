@@ -14,8 +14,8 @@ function App() {
           <Navbar/>
           <Switch>
             <Route exact path='/' component={LandingPage}/>
-            <Route path = './Components/Checkout.js' component={Checkout}/>
-            <Route path = './Components/Pages/Login' component={Login}/>
+            <Route path = '/checkout' component={Checkout}/>
+            <Route path = '/login' component={Login}/>
             <Route default component = {<div>Not Found</div>}/>
         </Switch>
       </div>
